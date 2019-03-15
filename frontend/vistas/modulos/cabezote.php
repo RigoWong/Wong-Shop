@@ -77,7 +77,7 @@ HEADER
 				
 				<a href="#">
 						
-					<img src="http://localhost/backend/<?php echo $social["logo"]; ?>" class="img-responsive">
+					<img src="http://localhost/webdesing/ShopWong/backend/<?php echo $social["logo"]; ?>" class="img-responsive">
 
 				</a>
 				

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 
 	<meta charset="UTF-8">
-
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	
 	<meta name="title" content="Tienda Virtual">
-
+	
 	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium enim esse eos officiis sit officia">
-
+	
 	<meta name="keyword" content="Lorem ipsum, dolor sit amet, consectetur, adipisicing, elit, Quisquam, accusantium, enim, esse">
 
-	<title>Tienda Virtual</title>
-
+	<title>Wong Shop</title>
+	
 	<?php
+
+		$servidor = Ruta::ctrRutaServidor();
 
 		$icono = ControladorPlantilla::ctrEstiloPlantilla();
 
-		echo '<link rel="icon" href="http://localhost/webdesing/ShopWong/backend/'.$icono["icono"].'">';
+		echo '<link rel="icon" href="'.$servidor.$icono["icono"].'">';
 
 		/*=============================================
 		MANTENER LA RUTA FIJA DEL PROYECTO
@@ -28,21 +30,25 @@
 
 	?>
 
-	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/bootstrap.min.css">
 
-	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
 
-	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plantilla.css">
+<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plantilla.css">
 
-	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/cabezote.css">
+<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/cabezote.css">
 
-	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.min.js"></script>
+<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/slide.css">
 
-	<script src="<?php echo $url; ?>vistas/js/plugins/bootstrap.min.js"></script>
+<script src="<?php echo $url; ?>vistas/js/plugins/jquery.min.js"></script>
+
+<script src="<?php echo $url; ?>vistas/js/plugins/bootstrap.min.js"></script>
+
+<script src="<?php echo $url; ?>vistas/js/plugins/jquery.easing.js"></script>
 
 </head>
 
@@ -112,12 +118,17 @@ if(isset($_GET["ruta"])){
 
 	}
 
+}else{
+
+	include "modulos/slide.php";
+
 }
 
 ?>
 
 <script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
 <script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
+<script src="<?php echo $url; ?>vistas/js/slide.js"></script>
 
 </body>
 </html>
